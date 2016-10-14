@@ -6,13 +6,13 @@ Then(/^Tengo que ver "(.*?)"$/) do |arg1|
     last_response.body.should =~ /#{arg1}/m
 end
 
-#When(/^Ingreso "(.*?)"$/) do |arg1|
-
-#end
-
 When(/^Posicion es (\d+)$/) do |posicion|
 	fill_in("posicion", :with => posicion)
 	click_button("Juegue")
+end
+
+Given(/^el barco esta en (\d+)$/) do |pos|
+	@@play.ubicar_barco pos.to_i
 end
 
 
