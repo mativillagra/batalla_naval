@@ -5,7 +5,7 @@ describe "Batalla_Naval" do
 	it "when 1 and I shot 1 should be Hundido" do 
         juego = Batalla_Naval.new
 		juego.ubicar_barco 1
-        juego.resultado(1).should == "Hundido"
+        juego.resultado(1).should == "Hundido, GANASTE"
     end
 
 	it "when 1 and I shot 0 should be Agua" do 

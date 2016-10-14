@@ -3,6 +3,7 @@ class Batalla_Naval
    def initialize
       @agua = 0
       @hundido = 1 
+      @intentos = 0
       @tablero = [0,0,0,0,0]
       @lista = ["_","_","_","_","_"]
       
@@ -23,18 +24,27 @@ class Batalla_Naval
    end
 
    def resultado posicion
-	  if posicion >= 0 and posicion < 5
+    
+      @intentos += 1
+       
+      if @intentos <= 3 
 
+      if posicion >= 0 and posicion < 5
+         
       	if @tablero[posicion] == @agua
              @lista[posicion] = "O"  
         	 return "Agua" 
       	else 
         	 @lista[posicion] = "X" 
-			  return "Hundido"
+			  return "Hundido, GANASTE"
       	end
   	  else
      	return "DEBE INGRESAR VALOR DE 0 A 4"
 	  end
+ 
+     else 
+         return "PERDISTE"
+     end
  end
 end
 

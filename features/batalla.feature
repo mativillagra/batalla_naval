@@ -10,7 +10,7 @@ Scenario: Ingreso 1
   Given Arranco la aplicacion
   And el barco esta en 1
   When Posicion es 1
-  Then Tengo que ver "Hundido"
+  Then Tengo que ver "Hundido, GANASTE"
 
 Scenario: Ingreso 0
 
