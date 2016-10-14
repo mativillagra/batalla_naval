@@ -14,11 +14,16 @@ class Batalla_Naval
 	end
 
    def resultado posicion
-      if @tablero[posicion] == @agua
-         return "Agua" 
-      else 
-         return "Hundido"
-      end
+	  if posicion >= 0 and posicion < 5
+	  	
+      	if @tablero[posicion] == @agua
+        	 return "Agua" 
+      	else 
+        	 return "Hundido"
+      	end
+  	  else
+     	return "DEBE INGRESAR VALOR DE 0 A 4"
+	  end
  end
 end
 
