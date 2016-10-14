@@ -7,11 +7,12 @@ Then(/^Tengo que ver "(.*?)"$/) do |arg1|
 end
 
 When(/^Ingreso "(.*?)"$/) do |arg1|
-  click_button(arg1)
+
 end
 
 When(/^Posicion es (\d+)$/) do |posicion|
-  fill_in(posicion, :with => 1)
+	fill_in("posicion", :with => posicion)
+	click_button("Juegue")
 end
 
 

@@ -8,6 +8,5 @@ Scenario: Portada
 Scenario: Ingreso 1
 
   Given Arranco la aplicacion
-  When Ingreso "Juegue"
-  And Posicion es 1
+  When Posicion es 1
   Then Tengo que ver "Hundido"
