@@ -3,7 +3,7 @@ require_relative "./lib/batalla_juego.rb"
 
 get '/' do
      @@play = Batalla_Naval.new
-	@disparo = "Inicio"
+	 @disparo = "Inicio"
      erb :juego
 end
 
