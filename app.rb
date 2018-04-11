@@ -13,4 +13,3 @@ post '/Disparo' do
      @tablero = @@play.muestra
      erb :juego
 end
-
